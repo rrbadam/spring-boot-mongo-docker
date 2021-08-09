@@ -1,0 +1,26 @@
+version: "3"
+
+services:
+  persons-db:
+    image: mongo:latest
+    container_name: persons-db
+    ports:
+     - 27017:27017
+    networks:
+      ebinetwork:
+        aliases:
+         - persons-db
+  persons-interface:
+    image: persons-interface-image
+    container_name: persons-interface
+    ports:
+      - 9080:9090
+    environment:
+      - "SPRING_PROFILES_ACTIVE=prod"
+    links:
+      - persons-db
+    networks:
+      - ebinetwork
+networks:
+  ebinetwork:
+    driver: bridge
