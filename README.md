@@ -2,7 +2,7 @@
 
 ## How to deploy project
 
-1. Clone the  [ebi repository](https://bitbucket.org/rrbadam/ebi.git) using git clone
+1. Clone the  [repository](https://github.com/rrbadam/spring-boot-mongo-docker.git) using git clone
 2. Move to folder /ebi under checkout
 3. Open command prompt at current location you are at
 4. To generate spring boot jar run ***gradle clean bootJar***. This will generate ebi-v1.jar in /ebi/build/libs/ folder
